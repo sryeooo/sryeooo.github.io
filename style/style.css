@@ -1,0 +1,147 @@
+@font-face {
+    font-family: "VT323";
+    src: url('../media/fonts/VT323-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Perfect-DOS-VGA-437";
+    src: url('../media/fonts/Perfect-DOS-VGA-437.ttf') format('truetype');
+    font-weight: normal;
+}
+
+body {
+    background-image: url(../media/files/Windose20-wallpaper.png);
+    height: 100vh;
+}
+nav {
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-bottom: solid #fba6a6;
+    margin-bottom: 0.5rem;
+    font-family: "VT323";
+    font-size: 25px;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.no-copy {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.text-hover {
+    color: #462dc6;
+}
+.text-hover:hover {
+    background-color: #462dc6;
+    color: white;
+}
+
+.bg-color-h {
+    color: white;
+    background-color: #462dc6;
+}
+
+.container {
+    margin-top: 64px;
+}
+
+.container-profile {
+    display: flex;
+}
+
+#profile {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.container-text-profile {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    margin-bottom: 25px;
+}
+
+#text-profile {
+    font-family: 'Perfect DOS VGA 437', Perfect-DOS-VGA-437, sans-serif;
+    font-size: 50px;
+    color: #462dc6;
+
+}
+
+.container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 20px;
+    margin-top: 0;
+    height: 24px;
+    background-color: #ac78a0;
+    width: 200px;
+    border: 1px solid #ff00c3;
+    box-shadow: 2px 2px 2px #ff00c3;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.container-img img {
+    width: 40px;
+    height: auto;
+}
+
+
+@media (max-width: 360px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        border-bottom: solid #fba6a6;
+        margin-bottom: 0.5rem;
+        font-family: Perfect-DOS-VGA-437;
+        font-size: 20px;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (min-width: 1024px) {}
+
+@media (min-width: 1440px) {}

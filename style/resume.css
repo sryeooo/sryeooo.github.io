@@ -1,0 +1,237 @@
+@font-face {
+  font-family: "VT323";
+  src: url('../media/fonts/VT323-Regular.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ac78a0;
+  background-image: url(../media/files/Windose20-wallpaper.png);
+  font-family: 'VT323', monospace;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+  font-size: 22px;
+}
+
+.window {
+  width: 700px;
+  background: #2c2c3a;
+  border: 4px solid #ff78c4;
+  box-shadow: 0 0 10px #ff78c4;
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  transition: all 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.window.minimized {
+  display: none;
+}
+
+.window.maximized {
+  width: 95vw;
+  height: 90vh;
+  top: 5vh !important;
+  left: 2.5vw !important;
+}
+
+.title-bar {
+  background: #ff78c4;
+  color: #1f1f2e;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+}
+
+.title-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-icon {
+  width: 18px;
+  height: 18px;
+  background: #1f1f2e;
+  border: 2px solid #fff;
+  display: inline-block;
+}
+
+.title-bar-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.btn {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1f1f2e;
+  background-color: #fff;
+  border: 1px solid #1f1f2e;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 16px;
+}
+
+.panel {
+  flex: 1;
+  border: 2px dashed #78ffd6;
+  padding: 10px;
+}
+
+.panel h3 {
+  margin-top: 0;
+  color: #78ffd6;
+  font-size: 24px;
+}
+
+.desktop-icon,
+.folder-icon {
+  position: absolute;
+  font-size: 30px;
+  color: #462dc6;
+  cursor: pointer;
+  font-family: 'VT323', monospace;
+  user-select: none;
+}
+
+.desktop-icon {
+  top: 20px;
+  left: 20px;
+}
+
+.folder-icon {
+  top: 80px;
+  left: 20px;
+}
+
+.folder-icon-home {
+  position: absolute;
+  font-size: 30px;
+  color: #462dc6;
+  cursor: pointer;
+  font-family: 'VT323', monospace;
+  user-select: none;
+  top: 140px;
+  left: 20px;
+}
+
+.file-manager {
+  width: 520px;
+  background: #3b3b4f;
+  border: 3px solid #b6f2ff;
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  display: none;
+  flex-direction: column;
+  z-index: 11;
+}
+
+.file-manager .title-bar {
+  background: #b6f2ff;
+  color: #000;
+}
+
+.file-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px;
+  gap: 10px;
+}
+
+.file {
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.file img {
+  width: 40px;
+  height: 40px;
+}
+
+.file-viewer {
+  width: 400px;
+  height: 300px;
+  background: #1e1e2d;
+  color: #00ff99;
+  border: 2px solid #00ff99;
+  position: absolute;
+  top: 160px;
+  left: 180px;
+  display: none;
+  z-index: 12;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+.file-viewer .title-bar {
+  background: #00ff99;
+  color: #000;
+  cursor: move;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.file-viewer .viewer-content {
+  padding: 12px;
+  white-space: pre-wrap;
+  height: calc(100% - 36px);
+  overflow: auto;
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+}
+
+.secret-file {
+  position: absolute;
+  left: 30px;
+  top: 45%;
+  font-size: 20px;
+  color: #ccc;
+  pointer-events: none;
+}
+
+.webcam-window {
+  position: absolute;
+  width: 180px;
+  height: 140px;
+  left: 20px;
+  top: 40%;
+  background: #a057ad;
+  border: 1px solid red;
+  z-index: 20;
+  cursor: move;
+  overflow: hidden;
+}
+
+.webcam-window video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

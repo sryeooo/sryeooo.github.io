@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume.exe</title>
+  <link rel="stylesheet" href="../style/resume.css">
+</head>
+
+<body>
+  <div class="window" id="resumeWindow" tabindex="0">
+    <div class="title-bar" id="titleBar">
+      <div class="title-bar-left">
+        <div class="app-icon"></div>
+        <span>Resume.exe</span>
+      </div>
+      <div class="title-bar-buttons">
+        <div class="btn" onclick="minimizeWindow('resumeWindow')">_</div>
+        <div class="btn" onclick="maximizeWindow('resumeWindow')">▭</div>
+        <div class="btn" onclick="closeWindow('resumeWindow')">✕</div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="panel">
+        <h3>Experience</h3>
+        <ul>
+          <li>Graduated from Technical High School in Database Programming</li>
+          <li>Experience with terminal-based Linux environments</li>
+          <li>Personal projects...</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Skills</h3>
+        <ul>
+          <li>Native in Persian</li>
+          <li>Fluent in Japanese</li>
+          <li>Proficient in English</li>
+          <li>Basic French and Classical Arabic</li>
+          <li>Programming: C, C#, PHP, SQL, JavaScript</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="desktop-icon" onclick="openWindow('resumeWindow')">
+    <h5>📁 resume.exe</h5>
+  </div>
+
+  <div class="folder-icon" onclick="openWindow('folderWindow')">
+    📁 sryeooo
+  </div>
+
+  <div class="folder-icon-home" onclick="FolderHome()">
+    📁 Home
+  </div>
+
+  <div class="secret-file">📄 secret.txt</div>
+  <div class="webcam-window" id="webcam">
+    <video autoplay loop muted>
+      <source src="../media/files/1442563418.webm" type="video/webm">
+    </video>
+  </div>
+
+  <div class="file-manager window" id="folderWindow">
+    <div class="title-bar" id="folderTitleBar">
+      <div class="title-bar-left">
+        <div class="app-icon"></div>
+        <span>~/sryeooo</span>
+      </div>
+      <div class="title-bar-buttons">
+        <div class="btn" onclick="closeWindow('folderWindow')">✕</div>
+      </div>
+    </div>
+    <div class="file-content">
+      <div class="file" onclick="openFile('projects')">
+        <img src="../media/files/text-x-generic.png" draggable="false" />
+        <div>projects.txt</div>
+      </div>
+      <div class="file" onclick="openFile('notes')">
+        <img src="../media/files/text-x-generic.png" draggable="false" />
+        <div>notes.txt</div>
+      </div>
+      <div class="file" onclick="openFile('readme')">
+        <img src="../media/files/text-x-generic.png" draggable="false" />
+        <div>README.txt</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="file-viewer" id="fileViewer">
+    <div class="title-bar" id="fileViewerTitle">
+      <div class="title-bar-left">
+        <div class="app-icon"></div>
+        <span>Notepad.exe</span>
+      </div>
+      <div class="title-bar-buttons">
+        <div class="btn" onclick="closeWindow('fileViewer')">✕</div>
+      </div>
+    </div>
+    <div class="viewer-content" id="fileContent"></div>
+  </div>
+
+  <script src="../js/resume.js">
+  </script>
+</body>
+</html>

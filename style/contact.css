@@ -1,0 +1,17 @@
+main {
+    margin-top: 32px;
+}
+.cont-wakaranai {
+    text-align: center;
+    font-family: Perfect-DOS-VGA-437;
+    color: #462dc6;
+}
+.cont-sticker {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.sticker {
+    width: 300px;
+    height: auto;
+}
